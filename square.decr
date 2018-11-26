@@ -1,0 +1,7 @@
+#!./parser.py
+>> x
+res = 0
+loop x
+  loop x
+    res ++
+<< res

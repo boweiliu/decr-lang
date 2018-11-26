@@ -1,0 +1,15 @@
+#!./parser.py
+>> x
+flag = 0
+nflag = 0
+nflag ++
+res = 0
+loop x
+   loop flag
+     res ++
+   loop nflag
+     flag = 0
+     flag ++
+     nflag = 0
+<< res
+# >> y 3
