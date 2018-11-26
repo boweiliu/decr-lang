@@ -16,6 +16,7 @@ Valid symbols are:
 >> VAR (read integers from stdin)
 < VAR (write ascii to stdout)
 > VAR (read ascii from stdin)
+'<< STRING (write a constant string to stdout. useful for debugging i guess. no quotes/escaping needed for STRINg since it is not parsed, but don't forget the space)
 VAR ++ (increment)
 VAR = 0 (declare variable and/or assign 0)
 VAR = OTHERVAR (declare variable and/or assign OTHERVAR to it)
@@ -57,7 +58,9 @@ def main(argv):
     #if tokens[0] == '#':
     #  lineno += 1
     #  continue
-    if '>>' in tokens:
+    if l.strip()[:3] == "'<<":
+      print(l.strip()[4:])
+    elif '>>' in tokens:
       if tokens[0] == '>>' and len(tokens) == 2:
         # read in from stdin
         varname = tokens[1]
