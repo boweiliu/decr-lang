@@ -26,7 +26,7 @@ For cli-mode (reading from '-'), use 'exit' to terminate the program and begin r
 
 def main(argv):
   if len(argv) < 2 or argv[1] == '-h':
-    print("Please provide source file.")
+    print("Usage: {} SRC_FILE".format(argv[0]))
     print("Language semantics: ")
     print(DESCRIPTION)
     sys.exit(1)

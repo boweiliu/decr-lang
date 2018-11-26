@@ -1,0 +1,16 @@
+Usage: ./parser.py SRC_FILE
+Language semantics: 
+
+All symbols must be separated by spaces.
+Valid symbols are:
+<< VAR (write integers to stdout)
+>> VAR (read integers from stdin)
+< VAR (write ascii to stdout)
+> VAR (read ascii from stdin)
+VAR ++ (increment)
+VAR = 0 (declare variable and/or assign 0)
+VAR = OTHERVAR (declare variable and/or assign OTHERVAR to it)
+loop VAR (execute the following block VAR times. Blocks are denoted python-style using indentation.)
+# Comments start with # .
+For cli-mode (reading from '-'), use 'exit' to terminate the program and begin reading input.
+
